@@ -1,0 +1,22 @@
+name: 'SSH My Action'
+description: 'Execute command via SSH'
+inputs:
+  HOST:
+    description: 'SSH host'
+  PORT:
+    description: 'SSH port'
+  USERNAME:
+    description: 'SSH username'
+  KEY:
+    description: 'SSH private key'
+  COMMAND:
+    description: 'Command to be executed'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.KEY }}
+    - ${{ inputs.HOST }}
+    - ${{ inputs.PORT }}
+    - ${{ inputs.USERNAME }}
+    - ${{ inputs.COMMAND }}
