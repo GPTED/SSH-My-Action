@@ -1,6 +1,8 @@
 # SSH My Action
 Execute command via ssh for your github workflows, example:
 
+![](https://github.com/fifsky/ssh-action/workflows/test/badge.svg)
+
 ```yaml
       - name: SSHing my action
         uses: ./
@@ -18,7 +20,7 @@ Execute command via ssh for your github workflows, example:
 - `PORT`: SSH port (*default: `22`*)
 - `USER`: SSH User (*default: `root`*)
 - `PRIVATE_KEY`: SSH raw private key
-- `CMD`: Commands to be executed on remote machine.
+- `CMD`: Commands to be executed on remote machine (*default: show current login info*)
 
   Use semicolon `;` to separates multiple commands, 
   you can also use  multiline string like this:
