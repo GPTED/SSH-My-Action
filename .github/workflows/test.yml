@@ -2,14 +2,14 @@ name: test
 on:
   push:
     branches:
-      - test
+      - feature
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: SSH My Action
-        uses: GPTED/SSH-My-Action@main
+        uses: GPTED/SSH-My-Action@feature
         with:
           USER: ${{ secrets.USER }}
           HOST: ${{ secrets.HOST }}

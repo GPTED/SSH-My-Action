@@ -1,5 +1,6 @@
 name: 'SSH My Action'
 description: 'Execute command via SSH'
+author: 'gumelar@gpted.com'
 inputs:
   USER:
     description: 'SSH username'

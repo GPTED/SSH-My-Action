@@ -26,7 +26,7 @@ chmod 600 $ID_RSA
 chmod 600 $KNOWN_HOSTS
 
 echo "========== Command =========="
-ssh -vvv -T -i $ID_RSA -o StrictHostKeyChecking=no -p $INPUT_PORT $INPUT_USER@$INPUT_HOST < $CMD_FILE
+ssh -vvv -T -i $ID_RSA -o StrictHostKeyChecking=no -p $INPUT_PORT $INPUT_USER@$INPUT_HOST "bash -s" < $CMD_FILE $GITHUB_REPOSITORY $GITHUB_REF_NAME
 echo "============ End ============"
 
 # Cleanup, just in case
