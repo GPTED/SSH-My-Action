@@ -13,4 +13,5 @@ jobs:
         with:
           USER: ${{ secrets.USER }}
           HOST: ${{ secrets.HOST }}
+          PORT: ${{ secrets.PORT }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY}}
