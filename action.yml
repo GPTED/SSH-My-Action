@@ -1,22 +1,27 @@
 name: 'SSH My Action'
 description: 'Execute command via SSH'
 inputs:
+  USER:
+    description: 'SSH username'
+    default: 'root'
+    required: false
   HOST:
     description: 'SSH host'
+    required: true
   PORT:
     description: 'SSH port'
-  USERNAME:
-    description: 'SSH username'
-  KEY:
+    default: '22'
+    required: false
+  PRIVATE_KEY:
     description: 'SSH private key'
-  COMMAND:
+    required: true
+  CMD:
     description: 'Command to be executed'
+    required: true
+    default: 'echo "$(whoami)" login at $(date) from Github Action!'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.KEY }}
-    - ${{ inputs.HOST }}
-    - ${{ inputs.PORT }}
-    - ${{ inputs.USERNAME }}
-    - ${{ inputs.COMMAND }}
+branding:
+  color: "black"
+  icon: "anchor"

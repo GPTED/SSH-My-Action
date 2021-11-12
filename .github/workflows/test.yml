@@ -1,0 +1,16 @@
+name: test
+on:
+  push:
+    branches:
+      - test
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: SSHing my action
+        uses: GPTED/SSH-My-Action@main
+        with:
+          USER: ${{ secrets.USER }}
+          HOST: ${{ secrets.HOST }}
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY}}
