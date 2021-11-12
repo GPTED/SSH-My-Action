@@ -4,8 +4,8 @@ Execute command via ssh for your github workflows, example:
 ![](https://github.com/fifsky/ssh-action/workflows/test/badge.svg)
 
 ```yaml
-      - name: SSHing my action
-        uses: ./
+      - name: SSH My Action
+        uses: GPTED/SSH-My-Action@0.1
         with:
           HOST: ${{ secrets.HOST }}
           PORT: ${{ secrets.PORT }}
