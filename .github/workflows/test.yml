@@ -5,7 +5,7 @@ on:
       - test
 
 jobs:
-  build:
+  ssh-job:
     runs-on: ubuntu-latest
     steps:
       - name: SSH My Action

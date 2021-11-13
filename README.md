@@ -1,7 +1,7 @@
 # SSH My Action
 Execute command via ssh for your github workflows, example:
 
-![](https://github.com/fifsky/ssh-action/workflows/test/badge.svg)
+![](https://github.com/GPTED/SSH-My-Action/workflows/test/badge.svg)
 
 ```yaml
       - name: SSH My Action
@@ -12,7 +12,6 @@ Execute command via ssh for your github workflows, example:
           USER: ${{ secrets.USER }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           CMD: whoami
-
 ```
 
 ## Inputs
